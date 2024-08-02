@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:#212121; color:#fff">
+    <div>
+        <ul class="language">
+            <li>Javascript</li>
+        </ul>
+    </div>
+</body>
+<script>
+    function setLanguage(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        console.log(li)
+        document.querySelector('.language').appendChild(li)
+    }
+    setLanguage('Typescript');
+    setLanguage('python');
+    setLanguage('Golang');
+    //edit
+    const l2 = document.querySelector('li:nth-child(2)')
+    // l2.textContent='saikiran'
+    let newl2 = document.createElement('li');
+    newl2.textContent='Java';
+    l2.replaceWith(newl2)
+
+    //remove
+    document.querySelector('li:last-child').remove()
+    //children, parentElement, nextElementSibling, prevElementsibling append, appendChild, prepend, remove
+</script>
+</html>
